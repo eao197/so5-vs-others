@@ -1,2 +1,6 @@
 .externals/
 *.swp
+src/target/
+src/so_5/
+src/timertt/
+src/local-build.rb
