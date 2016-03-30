@@ -20,4 +20,5 @@ MxxRu::Cpp::composite_target( MxxRu::BUILD_ROOT ) {
 	end
 
 	required_prj 'samples/habrhabr_go_vs_d_fibonacci/prj.rb'
+	required_prj 'samples/habrhabr_go_vs_d_default_section/prj.rb'
 }
