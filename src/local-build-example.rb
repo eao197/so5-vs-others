@@ -44,13 +44,13 @@ end
 MxxRu::Cpp::composite_target do
   if 'gcc' == toolset.name
     global_obj_placement MxxRu::Cpp::RuntimeSubdirObjPlacement.new(
-      '_gcc_' + detect_gcc_version )
+      'target/gcc_' + detect_gcc_version )
   elsif 'vc' == toolset.name
     global_obj_placement MxxRu::Cpp::RuntimeSubdirObjPlacement.new(
-      '_vc_' + detect_vc_version )
+      'target/vc_' + detect_vc_version )
   elsif 'clang' == toolset.name
     global_obj_placement MxxRu::Cpp::RuntimeSubdirObjPlacement.new(
-      '_clang_' + detect_clang_version )
+      'target/clang_' + detect_clang_version )
   else
     version = toolset.tag( 'ver_hi', 'x' ) + '_' + toolset.tag( 'ver_lo', 'x' )
     global_obj_placement MxxRu::Cpp::RuntimeSubdirObjPlacement.new(

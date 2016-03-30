@@ -18,4 +18,6 @@ MxxRu::Cpp::composite_target( MxxRu::BUILD_ROOT ) {
 		MxxRu::enable_show_brief
 		global_obj_placement MxxRu::Cpp::RuntimeSubdirObjPlacement.new( 'target' )
 	end
+
+	required_prj 'samples/habrhabr_go_vs_d_fibonacci/prj.rb'
 }
