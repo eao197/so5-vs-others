@@ -20,8 +20,7 @@ void fibonacci( mchain_t values_ch, mchain_t quit_ch )
 
 		r = receive( quit_ch, no_wait, [](quit){} );
 	}
-	while( mchain_props::extraction_status_t::chain_closed != r.status()
-			&& 1 != r.handled() );
+	while( mchain_props::extraction_status_t::chain_closed != r.status() && 1 != r.handled() );
 }
 
 int main()
@@ -40,9 +39,7 @@ int main()
 
 	fibonacci_thr = thread{ fibonacci, values_ch, quit_ch };
 
-	receive(
-			from( values_ch ).handle_n( 10 ),
-			[]( int v ) { cout << v << endl; } );
+	receive( from( values_ch ).handle_n( 10 ), []( int v ) { cout << v << endl; } );
 
 	send< quit >( quit_ch );
 }
