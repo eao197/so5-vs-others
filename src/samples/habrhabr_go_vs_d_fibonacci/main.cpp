@@ -18,7 +18,7 @@ void fibonacci( mchain_t values_ch, mchain_t quit_ch )
 		auto old_x = x;
 		x = y; y = old_x + y;
 
-		r = receive( quit_ch, no_wait, [&](quit){} );
+		r = receive( quit_ch, no_wait, [](quit){} );
 	}
 	while( mchain_props::extraction_status_t::chain_closed != r.status()
 			&& 1 != r.handled() );
