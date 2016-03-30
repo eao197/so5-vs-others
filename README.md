@@ -68,3 +68,34 @@ cd so5-vs-others/src
 ruby build.rb
 target\release\habrhabr_go_vs_d_fibonacci
 ```
+
+## Yet Again The Full Sequence :)
+
+On Unixes (Linux/FreeBSD/MacOSX):
+```
+git clone https://github.com/eao197/so5-vs-others
+cd so5-vs-others
+rake -f externals.rb
+cd src
+ruby build.rb
+export LD_LIBRARY_PATH=$PWD/target/release
+./target/release/habrhabr_go_vs_d_fibonacci
+...
+```
+On Windows:
+```
+git clone https://github.com/eao197/so5-vs-others
+cd so5-vs-others
+rake -f externals.rb
+cd src
+ruby build.rb
+target\release\habrhabr_go_vs_d_fibonacci
+...
+```
+## Building of a Specific Example
+
+If you want to build just one specific example do steps like shown bellow:
+```
+cd so5-vs-others/src
+ruby samples/habrhabr_go_vs_d_fibonacci
+```
