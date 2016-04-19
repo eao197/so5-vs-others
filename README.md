@@ -11,7 +11,7 @@ To install Mxx\_ru:
 ```
 gem install Mxx_ru
 ```
-Note: Mxx\_ru 1.6.8 or above is required. If you have older version it is necessary to update Mxx\_ru:
+Note: Mxx\_ru 1.6.10 or above is required. If you have older version it is necessary to update Mxx\_ru:
 ```
 gem update Mxx_ru
 ```
@@ -28,7 +28,7 @@ These examples have been tested under GNU C++ 5.2-5.2, clang 3.6-3.7 and Visual 
 ```
 git clone https://github.com/eao197/so5-vs-others
 cd so5-vs-others
-rake -f externals.rb
+mxxruexternals
 ```
 
 ## Building
@@ -75,7 +75,7 @@ On Unixes (Linux/FreeBSD/MacOSX):
 ```
 git clone https://github.com/eao197/so5-vs-others
 cd so5-vs-others
-rake -f externals.rb
+mxxruexternals
 cd src
 ruby build.rb
 export LD_LIBRARY_PATH=$PWD/target/release
@@ -86,7 +86,7 @@ On Windows:
 ```
 git clone https://github.com/eao197/so5-vs-others
 cd so5-vs-others
-rake -f externals.rb
+mxxruexternals
 cd src
 ruby build.rb
 target\release\habrhabr_go_vs_d_fibonacci
